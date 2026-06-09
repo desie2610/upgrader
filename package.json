@@ -1,0 +1,31 @@
+{
+  "name": "cs-upgrade-simulator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:data": "node tools/generateSkinData.mjs",
+    "predev": "npm run generate:data",
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "npm run generate:data",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "gh-pages": "^6.3.0",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
